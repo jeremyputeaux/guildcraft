@@ -1,0 +1,12 @@
+## Interface: 11307
+## Title: GuildCraft
+## Notes: Repertoire des metiers et recettes de la guilde
+## Version: 1.0
+## Author: GuildCraft
+## SavedVariables: GuildCraftDB
+
+Core.lua
+DB.lua
+Scanner.lua
+Broadcast.lua
+UI.lua
