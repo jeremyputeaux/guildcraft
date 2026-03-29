@@ -85,7 +85,7 @@ function GC:CreateUI()
     -- Fond de la searchbox
     local sbBg = searchBox:CreateTexture(nil, "BACKGROUND")
     sbBg:SetAllPoints()
-    sbBg:SetColorTexture(0, 0, 0, 0.5)
+    sbBg:SetTexture(0, 0, 0, 0.5)
 
     local sbLabel = frame:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
     sbLabel:SetPoint("LEFT", searchBox, "RIGHT", 6, 0)
@@ -156,7 +156,7 @@ function GC:BuildTabs()
 
         local bg = btn:CreateTexture(nil, "BACKGROUND")
         bg:SetAllPoints()
-        bg:SetColorTexture(0.2, 0.2, 0.2, 0.7)
+        bg:SetTexture(0.2, 0.2, 0.2, 0.7)
         btn.bg = bg
 
         btn:SetScript("OnClick", function()
@@ -165,17 +165,17 @@ function GC:BuildTabs()
             GC:RefreshUI()
         end)
 
-        btn:SetScript("OnEnter", function(self) self.bg:SetColorTexture(0.35, 0.35, 0.35, 0.9) end)
+        btn:SetScript("OnEnter", function(self) self.bg:SetTexture(0.35, 0.35, 0.35, 0.9) end)
         btn:SetScript("OnLeave", function(self)
             local active = (profName == "Tous" and GC.currentProf == nil)
                         or (profName == GC.currentProf)
-            self.bg:SetColorTexture(active and 0.3 or 0.2, active and 0.3 or 0.2, active and 0.3 or 0.2, 0.7)
+            self.bg:SetTexture(active and 0.3 or 0.2, active and 0.3 or 0.2, active and 0.3 or 0.2, 0.7)
         end)
 
         -- Surligner l'onglet actif
         local active = (profName == "Tous" and GC.currentProf == nil)
                     or (profName == GC.currentProf)
-        bg:SetColorTexture(active and 0.3 or 0.2, active and 0.3 or 0.2, active and 0.3 or 0.2, 0.7)
+        bg:SetTexture(active and 0.3 or 0.2, active and 0.3 or 0.2, active and 0.3 or 0.2, 0.7)
 
         x = x + btn:GetWidth() + 4
         table.insert(frame.tabs, btn)

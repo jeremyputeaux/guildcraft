@@ -104,13 +104,18 @@ end
 SLASH_GUILDCRAFT1 = "/gc"
 SLASH_GUILDCRAFT2 = "/guildcraft"
 SlashCmdList["GUILDCRAFT"] = function(msg)
-    if msg == "reload" or msg == "scan" then
-        GC:ScanProfessionLevels()
-        GC:SendMyData()
-        print("|cff00ff00GuildCraft:|r Scan et broadcast effectues.")
-    elseif msg == "debug" then
-        GC:ToggleDebug()
-    else
-        GC:ToggleUI()
+    local ok, err = pcall(function()
+        if msg == "reload" or msg == "scan" then
+            GC:ScanProfessionLevels()
+            GC:SendMyData()
+            print("|cff00ff00GuildCraft:|r Scan et broadcast effectues.")
+        elseif msg == "debug" then
+            GC:ToggleDebug()
+        else
+            GC:ToggleUI()
+        end
+    end)
+    if not ok then
+        print("|cffff0000GuildCraft erreur:|r " .. tostring(err))
     end
 end

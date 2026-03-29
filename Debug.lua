@@ -72,7 +72,7 @@ function GC:CreateDebugUI()
     local sep = frame:CreateTexture(nil, "BACKGROUND")
     sep:SetSize(550, 1)
     sep:SetPoint("TOP", frame, "TOP", 0, -62)
-    sep:SetColorTexture(0.5, 0.5, 0.5, 0.5)
+    sep:SetTexture(0.5, 0.5, 0.5, 0.5)
 
     -- Zone de donnees scannees (moitie haute)
     local dataTitle = frame:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
