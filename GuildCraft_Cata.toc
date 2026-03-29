@@ -11,3 +11,4 @@ Scanner.lua
 Broadcast.lua
 UI.lua
 Debug.lua
+Minimap.lua
