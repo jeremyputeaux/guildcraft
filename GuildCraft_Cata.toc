@@ -10,3 +10,4 @@ DB.lua
 Scanner.lua
 Broadcast.lua
 UI.lua
+Debug.lua

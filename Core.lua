@@ -108,6 +108,8 @@ SlashCmdList["GUILDCRAFT"] = function(msg)
         GC:ScanProfessionLevels()
         GC:SendMyData()
         print("|cff00ff00GuildCraft:|r Scan et broadcast effectues.")
+    elseif msg == "debug" then
+        GC:ToggleDebug()
     else
         GC:ToggleUI()
     end
